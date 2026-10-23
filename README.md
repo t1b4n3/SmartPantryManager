@@ -1,3 +1,0 @@
-Smart Pantry Manager
-
-

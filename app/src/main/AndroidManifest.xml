@@ -21,6 +21,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddEditPantryActivity"
+            android:exported="false"
+            android:label="Add/Edit Pantry Item" />
+        <activity
+            android:name=".SuggestedRecipesActivity"
+            android:exported="false"
+            android:label="Suggested Recipes" />
+        <activity
+            android:name=".RecipeDetailActivity"
+            android:exported="false"
+            android:label="Recipe Details" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="Settings" />
     </application>
 
 </manifest>

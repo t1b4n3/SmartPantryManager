@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Settings &amp; Preferences"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:layout_marginBottom="24dp" />
+
+    <Switch
+        android:id="@+id/switchExpiringAlerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expiring-Soon Alerts"
+        android:textSize="16sp"
+        android:checked="true"
+        android:layout_marginBottom="16dp"
+        android:minHeight="48dp" />
+
+    <Switch
+        android:id="@+id/switchDarkMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dark Theme Preference"
+        android:textSize="16sp"
+        android:checked="false"
+        android:layout_marginBottom="24dp"
+        android:minHeight="48dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Smart Pantry Manager"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile App Development 700\nStrict Recipe Matching based on Home Pantry Ingredients to Cut Food Waste.\nVersion 1.0"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:lineSpacingExtra="4dp" />
+
+</LinearLayout>

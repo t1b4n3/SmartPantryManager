@@ -165,6 +165,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return list;
     }
 
+    private String normalizeIngredientName(String name) {
+        if (name == null) return "";
+        String norm = name.trim().toLowerCase();
+        if (norm.endsWith("es") && norm.length() > 3) {
+            norm = norm.substring(0, norm.length() - 2);
+        } else if (norm.endsWith("s") && norm.length() > 2) {
+            norm = norm.substring(0, norm.length() - 1);
+        }
+        return norm;
+    }
+
     // Strict Matching Core Logic
     public List<Recipe> getSuggestedRecipes() {
         List<Recipe> allRecipes = getAllRecipes();
@@ -175,10 +186,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             boolean canMake = true;
             for (RecipeIngredient req : recipe.getIngredients()) {
                 boolean foundSufficient = false;
+                String reqNorm = normalizeIngredientName(req.getIngredientName());
                 for (PantryItem pantry : pantryItems) {
-                    if (pantry.getName().equalsIgnoreCase(req.getIngredientName().trim())) {
-                        // Check unit compatibility or quantity
-                        // If units match or are compatible (e.g. pcs, grams, ml, cups), verify quantity
+                    String pantryNorm = normalizeIngredientName(pantry.getName());
+                    if (pantryNorm.equals(reqNorm) || pantryNorm.contains(reqNorm) || reqNorm.contains(pantryNorm)) {
                         if (pantry.getQuantity() >= req.getRequiredQuantity()) {
                             foundSufficient = true;
                             break;

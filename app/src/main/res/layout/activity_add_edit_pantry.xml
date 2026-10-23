@@ -25,7 +25,7 @@
             android:id="@+id/etIngredientName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ingredient Name (e.g. egg, milk)"
+            android:hint="Ingredient Name "
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -39,7 +39,7 @@
             android:id="@+id/etQuantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Quantity (e.g. 5.0)"
+            android:hint="Quantity"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,7 +53,7 @@
             android:id="@+id/etUnit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Unit (e.g. pcs, grams, cups, tbsp)"
+            android:hint="Unit (grams, cups, tbsp)"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
